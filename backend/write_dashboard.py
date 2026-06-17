@@ -1,20 +1,14 @@
-import os
+path = r'C:\Users\basir\OneDrive\Desktop\programs\trading-copilot\backend\app\main.py'
 
-files = [
-    r'C:\Users\basir\OneDrive\Desktop\programs\trading-copilot\frontend\src\pages\SessionScanner.tsx',
-    r'C:\Users\basir\OneDrive\Desktop\programs\trading-copilot\frontend\src\pages\MTFAnalysis.tsx',
-    r'C:\Users\basir\OneDrive\Desktop\programs\trading-copilot\frontend\src\pages\Backtester.tsx',
-]
+with open(path, 'r') as f:
+    content = f.read()
 
-for path in files:
-    with open(path, 'r', encoding='utf-8') as f:
-        content = f.read()
-    content = content.replace(
-        "import.meta.env.VITE_API_URL || 'http://localhost:8000'",
-        "import.meta.env.VITE_API_URL || 'https://trading-copilot-production-d56d.up.railway.app'"
-    )
-    with open(path, 'w', encoding='utf-8') as f:
-        f.write(content)
-    print('Fixed:', os.path.basename(path))
+content = content.replace(
+    'allow_origins=settings.ALLOWED_ORIGINS,',
+    'allow_origins=["*"],'
+)
 
-print('Done')
+with open(path, 'w') as f:
+    f.write(content)
+
+print('Fixed CORS')
