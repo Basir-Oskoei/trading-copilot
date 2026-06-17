@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { Upload, TrendingUp, TrendingDown, Minus, AlertTriangle, CheckCircle } from 'lucide-react'
+import { Upload, TrendingUp, TrendingDown, Minus, AlertTriangle } from 'lucide-react'
 import axios from 'axios'
 
 const api = axios.create({ baseURL: 'http://localhost:8000', timeout: 60000 })
