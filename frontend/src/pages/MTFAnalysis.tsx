@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { TrendingUp, TrendingDown, Minus, RefreshCw, AlertTriangle } from 'lucide-react'
 import axios from 'axios'
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://trading-copilot-production-d56d.up.railway.app'
 const api = axios.create({ baseURL: BASE_URL, timeout: 120000 })
 const card = { backgroundColor: '#1a1d2e', border: '1px solid #2a2d3e', borderRadius: '12px', padding: '20px' }
 
