@@ -78,7 +78,7 @@ export default function SessionScanner() {
 
       {currentSession && (
         <div style={{ ...card, backgroundColor: sessionStyle.bg, borderColor: sessionStyle.border }}>
-          <div style={{ display: 'flex', align: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <div style={{ fontSize: '18px', fontWeight: 700, color: sessionStyle.color }}>{sessionStyle.label}</div>
             <div style={{ fontSize: '13px', color: '#94a3b8', marginTop: '4px' }}>{currentSession.description}</div>
           </div>
