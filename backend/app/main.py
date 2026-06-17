@@ -5,7 +5,7 @@ import os
 
 from app.config import settings
 from app.database import create_tables
-from app.api.v1 import analysis, signals, trades, backtest, market_data, app_settings, scanner
+from app.api.v1 import analysis, signals, trades, backtest, market_data, app_settings, scanner, pro
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -31,6 +31,7 @@ app.include_router(backtest.router, prefix="/api/v1/backtest", tags=["backtest"]
 app.include_router(market_data.router, prefix="/api/v1/market", tags=["market"])
 app.include_router(app_settings.router, prefix="/api/v1/settings", tags=["settings"])
 app.include_router(scanner.router, prefix="/api/v1/scanner", tags=["scanner"])
+app.include_router(pro.router, prefix="/api/v1/pro", tags=["pro"])
 
 
 @app.on_event("startup")

@@ -101,7 +101,7 @@ Include ALL {n} symbols in rankings array ordered by confidence descending."""
 
     message = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=2000,
+        max_tokens=3000,
         messages=[{"role": "user", "content": prompt}],
     )
 

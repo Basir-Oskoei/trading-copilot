@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Sidebar from './components/layout/Sidebar'
 import Dashboard from './pages/Dashboard'
-import Analysis from './pages/Analysis'
 import Scanner from './pages/Scanner'
+import MTFAnalysis from './pages/MTFAnalysis'
+import Backtester from './pages/Backtester'
+import SessionScanner from './pages/SessionScanner'
+import Analysis from './pages/Analysis'
 import Signals from './pages/Signals'
 import Journal from './pages/Journal'
 import AppSettings from './pages/AppSettings'
@@ -16,6 +19,9 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/scanner" element={<Scanner />} />
+            <Route path="/mtf" element={<MTFAnalysis />} />
+            <Route path="/backtest" element={<Backtester />} />
+            <Route path="/session" element={<SessionScanner />} />
             <Route path="/analysis" element={<Analysis />} />
             <Route path="/signals" element={<Signals />} />
             <Route path="/journal" element={<Journal />} />
